@@ -23,7 +23,7 @@ Trees can also be used, and are often sees with word ladders, a smiliar implemen
 
 Here, there are eight directions. For each word to be found, we'll get all the locations where we see the first letter, and try to make the words in directional sequence, which should fail enough times to be quick at finding the right one!
 
-## Implementation
+## Usage
 
 Super slim: 
 
