@@ -23,10 +23,46 @@ Trees can also be used, and are often seen with word ladders, a smiliar implemen
 
 Anyway. In the word search there are eight neighbors, save the edge pieces (though this becomes interesting if wrapping is allowed). For each word to be found, we'll get all the locations where we see the first letter [O(n)], and try to make the words in each linear direction, which should fail enough times, early enough, to be quick at finding the right one!
 
-## Usage
+# Usage
 
-Super slim: 
+Super slim:
 
-`python --inputfile example1.txt`
+`python wordsearch.py --inputfile example2.txt`
 
-(for example)
+## Results
+
+For the following 4x3 matrix:
+```
+A B C
+D E F
+G H I
+J K L
+```
+
+Allowing words to wrap around, look for these targets:
+```
+FED
+CAB
+AEIJBFG
+LGEC
+HIGH
+```
+
+The result: coordinates for the beginning and ending of the searched word, if it exists:
+```
+: Working with: data/example2.txt
+:: Done loading!  (in 0.00266ms):
+
+:: Soving the puzzle!
+:: Done solving!  (in 0.00034ms):: 
+
+:: Solutions:
+:: aeijbfg: (0, 0) (2, 0)
+:: cab: (0, 2) (0, 1)
+:: high: NOT FOUND
+:: fed: (1, 2) (1, 0)
+:: lgec: (3, 2) (0, 2)
+```
+
+## Moving Forward
+Clearly these puzzles are too small to really appreciate how quickly (or not) and efficiently (or not) this implementation turns out to be. It wouldn't be hard to write some code to rapidly generate word searches of any complexity. :)
